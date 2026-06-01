@@ -75,7 +75,7 @@ int main() {
 
     bool ok = true;
     for (int i = 0; i < M * P; i++) {
-        if (fabs(h_C_cpu[i] - h_C_gpu[i]) > 1e-1f) {
+        if (std::abs(h_C_cpu[i] - h_C_gpu[i]) > 1e-1f) {
             ok = false;
             break;
         }
